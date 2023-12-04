@@ -11,6 +11,7 @@
 CLIENTTAG_BNCHATBOT, 		 -- CHAT bot
 CLIENTTAG_STARCRAFT, 		 -- Starcraft (original)
 CLIENTTAG_BROODWARS, 		 -- Starcraft EXpansion Pack
+CLIENTTAG_CMBW,     		 -- CosMonarchy BroodWar
 CLIENTTAG_SHAREWARE, 		 -- Starcraft Shareware
 CLIENTTAG_DIABLORTL, 		 -- Diablo ReTaiL
 CLIENTTAG_DIABLOSHR, 		 -- Diablo SHaReware

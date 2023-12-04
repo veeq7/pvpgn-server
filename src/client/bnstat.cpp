@@ -170,6 +170,15 @@ extern int main(int argc, char * argv[])
 		}
 		clienttag = CLIENTTAG_BROODWARS;
 	}
+	else if (std::strcmp(argv[a], "-w") == 0 || std::strcmp(argv[a], "--client=CMBW") == 0)
+	{
+		if (clienttag)
+		{
+			std::fprintf(stderr, "%s: client type was already specified as \"%s\"\n", argv[0], clienttag);
+			usage(argv[0]);
+		}
+		clienttag = CLIENTTAG_CMBW;
+	}
 	else if (std::strcmp(argv[a], "-d") == 0 || std::strcmp(argv[a], "--client=DRTL") == 0)
 	{
 		if (clienttag)

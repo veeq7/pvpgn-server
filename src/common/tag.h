@@ -87,6 +87,8 @@ typedef enum {
 #define CLIENTTAG_STARCRAFT_UINT 	0x53544152
 #define CLIENTTAG_BROODWARS 		"SEXP" /* Starcraft EXpansion Pack */
 #define CLIENTTAG_BROODWARS_UINT 	0x53455850
+#define CLIENTTAG_CMBW				"CMBW" /* CosMonarchy BroodWar */
+#define CLIENTTAG_CMBW_UINT 		'CMBW'
 #define CLIENTTAG_SHAREWARE 		"SSHR" /* Starcraft Shareware */
 #define CLIENTTAG_SHAREWARE_UINT	0x53534852
 #define CLIENTTAG_DIABLORTL 		"DRTL" /* Diablo ReTaiL */

@@ -107,6 +107,15 @@ namespace {
 			return 0;
 		}
 
+		if (std::strcmp(clienttag, CLIENTTAG_CMBW) == 0)
+		{
+			*versionid = CLIENT_VERSIONID_CMBW;
+			*gameversion = CLIENT_GAMEVERSION_CMBW;
+			*exeinfo = CLIENT_EXEINFO_CMBW;
+			*checksum = CLIENT_CHECKSUM_CMBW;
+			return 0;
+		}
+
 		if (std::strcmp(clienttag, CLIENTTAG_WARCIIBNE) == 0)
 		{
 			*versionid = CLIENT_VERSIONID_W2BN;
@@ -477,6 +486,7 @@ namespace pvpgn
 
 			if (std::strcmp(clienttag, CLIENTTAG_STARCRAFT) == 0 ||
 				std::strcmp(clienttag, CLIENTTAG_BROODWARS) == 0 ||
+				std::strcmp(clienttag, CLIENTTAG_CMBW) == 0 ||
 				std::strcmp(clienttag, CLIENTTAG_WARCIIBNE) == 0)
 			{
 				if (!(packet = packet_create(packet_class_bnet)))

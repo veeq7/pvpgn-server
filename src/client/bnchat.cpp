@@ -69,6 +69,7 @@
 #define CHANNEL_BNCHATBOT "Chat"
 #define CHANNEL_STARCRAFT "Starcraft"
 #define CHANNEL_BROODWARS "Brood War"
+#define CHANNEL_CMBW      "Cosmonarchy Brood War"
 #define CHANNEL_SHAREWARE "Starcraft Shareware"
 #define CHANNEL_DIABLORTL "Diablo Retail"
 #define CHANNEL_DIABLOSHR "Diablo Shareware" /* FIXME: is this one right? */
@@ -352,6 +353,7 @@ namespace
 			"    -c, --change-password       change account password\n"
 			"    --client=CHAT               report client as a chat bot\n"
 			"    -b, --client=SEXP           report client as Brood Wars\n"
+			"    -w, --client=CMBW           report client as Brood Wars\n"
 			"    -d, --client=DRTL           report client as Diablo Retail\n"
 			"    --client=DSHR               report client as Diablo Shareware\n");
 		std::fprintf(stderr,
@@ -445,6 +447,16 @@ namespace
 			}
 			*clienttag = CLIENTTAG_BROODWARS;
 			*channel = CHANNEL_BROODWARS;
+		}
+		else if (std::strcmp(argv[a], "-c") == 0 || std::strcmp(argv[a], "--client=CMBW") == 0)
+		{
+			if (*clienttag)
+			{
+				std::fprintf(stderr, "%s: client type was already specified as \"%s\"\n", argv[0], *clienttag);
+				usage(argv[0]);
+			}
+			*clienttag = CLIENTTAG_CMBW;
+			*channel = CHANNEL_CMBW;
 		}
 		else if (std::strcmp(argv[a], "-d") == 0 || std::strcmp(argv[a], "--client=DRTL") == 0)
 		{

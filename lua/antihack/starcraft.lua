@@ -27,7 +27,7 @@ function ah_timer_tick(options)
 	-- iterate all games
 	for i,game in pairs(api.server_get_games()) do
 		-- check only Starcraft: BroodWar
-		if game.clienttag and (game.clienttag == CLIENTTAG_BROODWARS) then
+		if game.clienttag and (game.clienttag == CLIENTTAG_BROODWARS or game.clienttag == CLIENTTAG_CMBW) then
 			-- check only games where count of players > 1
 			if game.players and (substr_count(game.players, ",") > -1) then
 				--DEBUG(game.players)

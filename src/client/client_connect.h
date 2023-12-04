@@ -43,6 +43,12 @@
 #define CLIENT_EXEINFO_SEXP     "StarCraft.exe 01/10/08 20:23:42 1220608"
 #define CLIENT_CHECKSUM_SEXP    0x8fbdf18d
 
+// Cosmonarchy Broodwar
+#define CLIENT_VERSIONID_CMBW   0x000000d1
+#define CLIENT_GAMEVERSION_CMBW 0x010f0201
+#define CLIENT_EXEINFO_CMBW     "StarCraft.exe 01/10/08 20:23:42 1220608"
+#define CLIENT_CHECKSUM_CMBW    0x8fbdf18d
+
 //Warcraft 2 Battle.Net Edition 2.02b
 #define CLIENT_VERSIONID_W2BN   0x0000004f
 #define CLIENT_GAMEVERSION_W2BN 0x02000201
