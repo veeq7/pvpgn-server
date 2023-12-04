@@ -47,17 +47,17 @@ By default, tracking is enabled and is only used for the purpose of sending info
 \* StarCraft clients beginning with patch 1.18 will not be supported by PvPGN-PRO due to protocol changes. A 1.18.0 versioncheck entry is included for compatibility with bot software.
 
 ## Support
-[Create an issue](https://github.com/pvpgn/pvpgn-server/issues) if you have any questions, suggestions, or anything else to say about PvPGN-PRO. Please note that D2GS is not part of the PvPGN project and is therefore unsupported here.
+[Create an issue](https://github.com/veeq7/pvpgn-server/issues) if you have any questions, suggestions, or anything else to say about PvPGN-PRO. Please note that D2GS is not part of the PvPGN project and is therefore unsupported here.
 Set `loglevels = fatal,error,warn,info,debug,trace` in `bnetd.conf` before obtaining logs and posting them.
 
 ## Development
 Submit pull requests to contribute to this project. Utilize C++11 features and adhere to the [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) whenever possible.
 
 ## Building
-See [docs/ports.md](https://github.com/pvpgn/pvpgn-server/blob/master/docs/ports.md) for operating systems and compilers that have been confirmed to work with PvPGN. Any operating system that supports WinAPI or POSIX, and any C++11 compliant compiler should be able to build PvPGN. The CMake files have been hardcoded to reject compilers older than Visual Studio 2015 and GCC 5.1.
+See [docs/ports.md](https://github.com/veeq7/pvpgn-server/blob/master/docs/ports.md) for operating systems and compilers that have been confirmed to work with PvPGN. Any operating system that supports WinAPI or POSIX, and any C++11 compliant compiler should be able to build PvPGN. The CMake files have been hardcoded to reject compilers older than Visual Studio 2015 and GCC 5.1.
 
 #### Windows
-Use [Magic Builder](https://github.com/pvpgn/pvpgn-magic-builder).
+Use [Magic Builder](https://github.com/veeq7/pvpgn-magic-builder).
 
 Alternatively, use cmake to generate the .sln project and build it from Visual Studio.
 ```
@@ -73,7 +73,7 @@ apt-get install git install cmake make build-essential zlib1g-dev
 apt-get install liblua5.1-0-dev #Lua support
 apt-get install mysql-server mysql-client libmysqlclient-dev #MySQL support
 cd /home
-git clone https://github.com/pvpgn/pvpgn-server.git
+git clone https://github.com/veeq7/pvpgn-server.git
 cmake -D CMAKE_INSTALL_PREFIX=/usr/local/pvpgn -D WITH_MYSQL=true -D WITH_LUA=true ../
 make
 make install
@@ -82,7 +82,7 @@ make install
 #### Ubuntu 16.04, 18.04
 ```
 sudo apt-get -y install build-essential git cmake zlib1g-dev
-git clone https://github.com/pvpgn/pvpgn-server.git
+git clone https://github.com/veeq7/pvpgn-server.git
 cd pvpgn-server && cmake -G "Unix Makefiles" -H./ -B./build
 cd build && make
 ```
@@ -97,7 +97,7 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 60 --slave /u
 sudo add-apt-repository -y ppa:george-edison55/cmake-3.x
 sudo apt-get update
 sudo apt-get -y install cmake
-git clone https://github.com/pvpgn/pvpgn-server.git
+git clone https://github.com/veeq7/pvpgn-server.git
 cd pvpgn-server && cmake -G "Unix Makefiles" -H./ -B./build
 cd build && make
 ```
@@ -107,7 +107,7 @@ cd build && make
 sudo apt-get -y install build-essential zlib1g-dev clang libc++-dev git
 wget https://cmake.org/files/v3.7/cmake-3.7.1-Linux-x86_64.tar.gz
 tar xvfz cmake-3.7.1-Linux-x86_64.tar.gz
-git clone https://github.com/pvpgn/pvpgn-server.git
+git clone https://github.com/veeq7/pvpgn-server.git
 cd pvpgn-server && CC=/usr/bin/clang CXX=/usr/bin/clang++ ../cmake-3.7.1-Linux-x86_64/bin/cmake -G "Unix Makefiles" -H./ -B./build
 cd build && make
 ```
@@ -117,7 +117,7 @@ cd build && make
 sudo yum -y install epel-release centos-release-scl
 sudo yum -y install git zlib-devel cmake3 devtoolset-4-gcc*
 sudo ln -s /usr/bin/cmake3 /usr/bin/cmake
-git clone https://github.com/pvpgn/pvpgn-server.git
+git clone https://github.com/veeq7/pvpgn-server.git
 cd pvpgn-server
 CC=/opt/rh/devtoolset-4/root/usr/bin/gcc CXX=/opt/rh/devtoolset-4/root/usr/bin/g++ cmake -G "Unix Makefiles" -H./ -B./build
 cd build && make
@@ -126,7 +126,7 @@ cd build && make
 #### Fedora 25
 ```
 sudo dnf -y install gcc-c++ gcc make zlib-devel cmake git
-git clone https://github.com/pvpgn/pvpgn-server.git
+git clone https://github.com/veeq7/pvpgn-server.git
 cd pvpgn-server
 cmake -G "Unix Makefiles" -H./ -B./build
 cd build && make
@@ -135,7 +135,7 @@ cd build && make
 #### FreeBSD 11
 ```
 sudo pkg install -y git cmake
-git clone https://github.com/pvpgn/pvpgn-server.git
+git clone https://github.com/veeq7/pvpgn-server.git
 cd pvpgn-server
 cmake -G "Unix Makefiles" -H./ -B./build
 cd build && make
